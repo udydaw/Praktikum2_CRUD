@@ -1,58 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name= "viewport" content="width-device-wide, initial-scale=1">
-    <meta name= "description" content="">
-    <meta name= "author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name= "generato" content= "Hugo 0.84.0">
-    <title>Login Siswa</title> 
-
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-        <style>
-            .bd-placeholder-img{
-                font-size :1.125rem;
-                text-anchor : middle;
-                -webkit-user-select : none;
-                -moz-user-seelct : none;
-                user-select : none;
-            }
-
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size:3.5 rem;
-                }
-            }
-       </style>
-
-                <!--Custom styles for this template-->
-            <link href="signin.css" rel="stylesheet">
-            </head>
-            <body class="text-center">
-                <div class="container">
-                    <main clas="form-signin">
-                    <form action="proses_login.php" method="POST">
-                        <h1>PERPUSTAKAAN</h1>
-                        <br>
-                        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-            <div class="form-floating">
-            <input type="username" class="form-control" Id="floatingInput" name="username" placeholder="Insert Username">
-            <label for="floatinginput">Username</label>
-            </div>
-            <div class="from-floating">
-            <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" required>
-            <label for="floatingPassword">Password</label>
-            </div>
-
-                <button class="w-100 btn btn-lg btn-primary" type="submit"> Sign In </button>
-                <p class="mt-5 mt-3 text-muted">&copy; 2021</p>
-            </form>
-            </main>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>LOG IN SISWA</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+	color: #957dad;
+	background: #e0bbe4;
+}
+.form-control {
+	min-height: 41px;
+	background: #fff;
+	box-shadow: none !important;
+	border-color: #e3e3e3;
+}
+.form-control:focus {
+	border-color: #70c5c0;
+}
+.form-control, .btn {        
+	border-radius: 2px;
+}
+.login-form {
+	width: 350px;
+	margin: 0 auto;
+	padding: 100px 0 30px;		
+}
+.login-form form {
+	color: #7a7a7a;
+	border-radius: 2px;
+	margin-bottom: 15px;
+	font-size: 13px;
+	background: #ececec;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;	
+	position: relative;	
+}
+.login-form h2 {
+	font-size: 22px;
+	margin: 35px 0 25px;
+}
+.login-form .avatar {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -50px;
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	z-index: 9;
+	background: #957dad;
+	padding: 15px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.login-form .avatar img {
+	width: 100%;
+}	
+.login-form input[type="checkbox"] {
+	position: relative;
+	top: 1px;
+}
+.login-form .btn, .login-form .btn:active {        
+	font-size: 16px;
+	font-weight: bold;
+	background: #957dad !important;
+	border: none;
+	margin-bottom: 20px;
+}
+.login-form .btn:hover, .login-form .btn:focus {
+	background: #d291bc !important;
+}    
+.login-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.login-form a:hover {
+	text-decoration: none;
+}
+.login-form form a {
+	color: #7a7a7a;
+	text-decoration: none;
+}
+.login-form form a:hover {
+	text-decoration: underline;
+}
+.login-form .bottom-action {
+	font-size: 14px;
+}
+</style>
+</head>
+<body>
+<div class="login-form">
+    <form action="proses_login.php" method="post">
+		<div class="avatar">
+			<img src="ava-removebg-preview.png" alt="Avatar">
+		</div>
+        <h2 class="text-center">MEMBER LOGIN PERPUS</h2>   
+        <div class="form-group">
+        	<input type="text" class="form-control" name="username" placeholder="Username" required="required">
         </div>
-    </body>
+		<div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>        
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+        </div>
+		<div class="bottom-action clearfix">
+            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+            <a href="#" class="float-right">Forgot Password?</a>
+        </div>
+    </form>
+    <p class="text-center small">Don't have an account? <a href="tambah_siswa.php">Sign up here!</a></p>
+</div>
+</body>
 </html>
-
-

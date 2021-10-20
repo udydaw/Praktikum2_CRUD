@@ -13,7 +13,7 @@
      include "navbar.php";
     ?>
 
-    <h1>Selamat Datang <?=$_SESSION["nama_siswa"]?></h1>
+    <h1>Selamat Datang <?=$_SESSION["nama_siswa"]?> di Perpustakaan Online!</h1>
 
     <!--JavaScript Bundle with Popper-->
     <script src="<!-- JavaScript Bundle with Popper -->">
